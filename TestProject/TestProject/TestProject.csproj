@@ -116,10 +116,11 @@
     <Compile Include="App_Start\ExtNetConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ExtNetController.cs" />
-    <Compile Include="Controllers\issuesController.cs" />
+    <Compile Include="Controllers\IssuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\TestData.cs" />
     <Compile Include="Models\ExtNetModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -130,7 +131,7 @@
     <Content Include="App_Readme\Ext.NET\README.md" />
     <Content Include="App_Readme\Ext.NET\LICENSE" />
     <Content Include="App_Readme\Ext.NET\CHANGELOG.md" />
-    <Content Include="Views\issues\Index.cshtml" />
+    <Content Include="Views\Issues\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
