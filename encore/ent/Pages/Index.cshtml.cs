@@ -1,17 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using enlib;
+using enlib.HtmlComponents;
+using enlib.TagHelpers;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace ent.Pages
 {
     public class IndexModel : PageModel
     {
+        public HtmlString HtmlCompBtn { get; private set; }
+        public HtmlString HtmlCompBtnVal { get; private set; }
+
+        public HtmlString TagHlpBtn { get; private set; }
+        public HtmlString TagHlpBtnVal { get; private set; }
+
         public void OnGet()
         {
+            HtmlCompBtn = new HtmlString(ButtonExtension.Button(null).ToString());
+            HtmlCompBtnVal = new HtmlString(ButtonExtension.Button(null, "Click me! (hccb)").ToString());
 
+            TagHlpBtn = new HtmlString(TagHelper2Html.Get(new ExtButton()));
+            TagHlpBtnVal = new HtmlString(TagHelper2Html.Get(new ExtButton(), "Click me! (thcb)"));
         }
     }
 }
