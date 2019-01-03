@@ -1,0 +1,23 @@
+﻿@page
+@model ent.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>HtmlComponents approach</h3>
+    Button: @Html.Button();
+    <br />
+    Button with custom text: @Html.Button("Click me! (hc)");
+    <h3>TagHelpers approach</h3>
+    Button: <ext-button></ext-button>
+    Button with custom text: <ext-button>Click me! (th)</ext-button>
+</body>
+</html>
