@@ -1,0 +1,41 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Text files: force them to be committed as native line ending (LF/Unix)
+*.asax text
+*.ashx text
+*.aspx text
+
+# Batch files become crazy if their file endings are not CRLF
+# EnableDelayedExpansion and goto:eol may jump anywhere in the script.
+*.bat text eol=crlf
+
+*.config text
+*.cs text
+*.cshtml text
+*.csproj text
+*.htm text
+*.html text
+*.js eol=lf
+*.jsb text
+*.json text
+*.md text
+*.php text
+*.ps1 text
+*.py text
+*.sln text
+*.sql text
+*.d.ts eol=lf
+*.target text
+*.txt eol=lf
+*.xml text eol=lf
+
+# These are expected to be always treated as binary files.
+*.bmp binary
+*.dat binary
+*.dll binary
+*.exe binary
+*.ico binary
+*.jar binary
+*.jpg binary
+*.png binary
