@@ -111,8 +111,10 @@ If you venture rebuilding the `enlib` project and try to see the changes reflect
 To wipe out the NuGet cache off the `enlib` package, on OS X, this should do:
 
 ```
-rm -rf ~/.nuget/packages/.nuget/enlib/1.0.0
+rm -rf ~/.nuget/packages/enlib/1.0.0
 ```
+
+Where *1.0.0* is the current version of the library. You can remove the whole *enlib* folder, but this would ensure older versions (if any) are retained in the cache).
 
 *Note:* The first character in the path is a tilde (~), it can be replaced by either your home directory (/Users/myself) or the bash environment variable `${HOME}`.
 
