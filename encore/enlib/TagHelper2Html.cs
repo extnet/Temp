@@ -29,7 +29,7 @@ namespace enlib
             var emptyAttrs = new TagHelperAttributeList();
             var output = new TagHelperOutput(null, emptyAttrs, gcTask);
 
-            var context = new TagHelperContext(String.Empty, emptyAttrs, new Dictionary<object, object>(), "myId");
+            var context = new TagHelperContext(String.Empty, emptyAttrs, new Dictionary<object, object>(), "noId");
 
             var task = tag.ProcessAsync(context, output);
 
@@ -47,7 +47,7 @@ namespace enlib
 
             var strctn = new StringBuilder();
             output.WriteTo(new StringWriter(strctn), HtmlEncoder.Default);
-            
+
             return strctn.ToString();
         }
 
