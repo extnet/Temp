@@ -47,6 +47,7 @@ namespace enlib
 
             var strctn = new StringBuilder();
             output.WriteTo(new StringWriter(strctn), HtmlEncoder.Default);
+            
             return strctn.ToString();
         }
 

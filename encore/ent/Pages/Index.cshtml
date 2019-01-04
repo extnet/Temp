@@ -5,27 +5,95 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Ext.NET Core Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
 </head>
 <body>
-    <h3>HtmlComponents approach</h3>
-    Button: @Html.Button();
-    <br />
-    Button with custom text: @Html.Button("Click me! (hc)");
-    <h3>TagHelpers approach</h3>
-    Button: <ext-button></ext-button>
-    Button with custom text: <ext-button>Click me! (th)</ext-button>
+    <div class="container" role="main">
+        <div class="page-header">
+            <h1>Buttons</h1>
+        </div>
 
-    <h3>"code behind"-like approach</h3>
-    <h4>HtmlComponents</h4>
-    @Model.HtmlCompBtn;
-    @Model.HtmlCompBtnVal;
-    <h4>TagHelpers approach</h4>
-    @Model.TagHlpBtn;
-    @Model.TagHlpBtnVal;
+        <h2>Html Component</h2>
+        <div class="row">
+            <div class="col-md-2">
+                Button
+            </div>
+            <div class="col-md-2">
+                @Html.Button()
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Button Text
+            </div>
+            <div class="col-md-2">
+                @Html.Button("Submit")
+            </div>
+        </div>
+
+        <h2>Tag Helper</h2>
+        <div class="row">
+            <div class="col-md-2">
+                Button
+            </div>
+            <div class="col-md-2">
+                <ext-button></ext-button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                Button Text
+            </div>
+            <div class="col-md-2">
+                <ext-button>Submit</ext-button>
+            </div>
+        </div>
+
+        <h2>Code Behind</h2>
+
+        <h3>Html Component</h3>
+        
+        <div class="row">
+            <div class="col-md-2">
+                HtmlCompBtn
+            </div>
+            <div class="col-md-2">
+                @Model.HtmlCompBtn
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                HtmlCompBtnVal
+            </div>
+            <div class="col-md-2">
+                @Model.HtmlCompBtnVal
+            </div>
+        </div>
+        
+        <h3>Tag Helper</h3>
+
+        <div class="row">
+            <div class="col-md-2">
+                TagHlpBtn
+            </div>
+            <div class="col-md-2">
+                @Model.TagHlpBtn
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                TagHlpBtnVal
+            </div>
+            <div class="col-md-2">
+                @Model.TagHlpBtnVal
+            </div>
+        </div>
+    </div>
 </body>
 </html>

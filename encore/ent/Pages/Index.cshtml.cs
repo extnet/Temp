@@ -18,10 +18,10 @@ namespace ent.Pages
         public void OnGet()
         {
             HtmlCompBtn = new HtmlString(ButtonExtension.Button(null).ToString());
-            HtmlCompBtnVal = new HtmlString(ButtonExtension.Button(null, "Click me! (hccb)").ToString());
+            HtmlCompBtnVal = new HtmlString(ButtonExtension.Button(null, "Submit").ToString());
 
             TagHlpBtn = new HtmlString(TagHelper2Html.Get(new ExtButton()));
-            TagHlpBtnVal = new HtmlString(TagHelper2Html.Get(new ExtButton(), "Click me! (thcb)"));
+            TagHlpBtnVal = new HtmlString(TagHelper2Html.Get(new ExtButton(), "Submit"));
         }
     }
 }
