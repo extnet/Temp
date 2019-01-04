@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ent", "ent\ent.csproj", "{CE39A051-F654-4902-AD02-48CA469CB49F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E46EE7D-A1DA-41B0-9425-ADC3B7650879} = {0E46EE7D-A1DA-41B0-9425-ADC3B7650879}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enlib", "enlib\enlib.csproj", "{0E46EE7D-A1DA-41B0-9425-ADC3B7650879}"
 EndProject

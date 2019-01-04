@@ -20,10 +20,8 @@
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.0" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT'">
-    <Exec Command="&quot;$(ProjectDir)&quot;\build\nuget_cache_clear.bat &quot;$(ProjectName)&quot; &quot;$(ProjectPath)&quot;" />
-  </Target>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Unix'">
-    <Exec Command="&quot;$(ProjectDir)&quot;/build/nuget_cache_clear.sh &quot;$(ProjectName)&quot; &quot;$(ProjectPath)&quot;" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)&quot;\build\nuget_cache_clear.bat &quot;$(ProjectName)&quot; &quot;$(ProjectPath)&quot;" Condition="'$(OS)' != 'Unix'" />
+    <Exec Command="&quot;$(ProjectDir)&quot;/build/nuget_cache_clear.sh &quot;$(ProjectName)&quot; &quot;$(ProjectPath)&quot;" Condition="'$(OS)' == 'Unix'" />
   </Target>
 </Project>
