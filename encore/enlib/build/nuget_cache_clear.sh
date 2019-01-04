@@ -22,7 +22,16 @@ fi
 
 cache_path="${HOME}/.nuget/packages/${project_name}/${version}"
 
-echo "NuGet packages cache path: ${cache_path}"
-echo -n "Removing NuGet package from NuGet cache: ${project_name}-${version}"
-rm -rf "${cache_path}"
-echo ", done."
+echo "NuGet package cache path: ${cache_path}"
+echo -n "Removing NuGet package from cache (if it exists): ${project_name}-${version}"
+if [ -d "${cache_path}" ]; then
+ if rm -rf "${cache_path}"; then
+  echo ", removed."
+ else
+  echo ", error.
+*** Error: unable to remove NuGet package from cache, package changes won't reflect on projects using it."
+  exit 1
+ fi
+else
+ echo ", not found."
+fi
