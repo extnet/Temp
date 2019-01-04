@@ -8,7 +8,7 @@
     <Product>Ext.NET Core</Product>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>enlib.snk</AssemblyOriginatorKeyFile>
-    <Version>0.0.1</Version>
+    <Version>0.0.1-draft0</Version>
     <AssemblyVersion>0.0.1.0</AssemblyVersion>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
