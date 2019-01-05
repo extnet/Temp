@@ -1,0 +1,10 @@
+<Project>
+  <!-- Infer script extension depending on the OS -->
+  <PropertyGroup>
+    <BatchScriptExt>bat</BatchScriptExt>
+    <BatchScriptExt Condition="'$(OS)' == 'Unix'">sh</BatchScriptExt>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;$(MSBuildThisFileDirectory)&quot;/nuget_cache_clear.$(BatchScriptExt) &quot;$(ProjectName)&quot; &quot;$(MSBuildThisFileDirectory)/productInfo.targets&quot;" />
+  </Target>
+</Project>

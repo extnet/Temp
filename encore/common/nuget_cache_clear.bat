@@ -30,6 +30,6 @@ if [%nupkver%] == [] (
 set nupkpth="%nuchpth:"=%\%projnme:"=%\%nupkver%"
 
 echo NuGet package cache path: %nupkpth%
-echo Removing NuGet package from cache (if it exists): %projnme:"=%-%nupkver%
+echo Removing NuGet package from cache if exists: %projnme:"=%-%nupkver%
 rmdir /s /q "%nupkpth:"=%"
-echo done.
+exit /b 0

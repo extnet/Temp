@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ImportGroup>
+    <Import Project="../common/productInfo.targets" />
+    <Import Project="../common/nuget_cache_clear.targets" />
+  </ImportGroup>
+
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Fabrício Murta</Authors>
-    <Company>Object.NET, Inc</Company>
-    <Product>Ext.NET Core</Product>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>enlib.snk</AssemblyOriginatorKeyFile>
-    <Version>0.0.1-draft0</Version>
-    <AssemblyVersion>0.0.1.0</AssemblyVersion>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
 
@@ -20,8 +20,4 @@
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.0" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(ProjectDir)&quot;\build\nuget_cache_clear.bat &quot;$(ProjectName)&quot; &quot;$(ProjectPath)&quot;" Condition="'$(OS)' != 'Unix'" />
-    <Exec Command="&quot;$(ProjectDir)&quot;/build/nuget_cache_clear.sh &quot;$(ProjectName)&quot; &quot;$(ProjectPath)&quot;" Condition="'$(OS)' == 'Unix'" />
-  </Target>
 </Project>
