@@ -12,3 +12,5 @@ centerplace to keep settings that might be repetitive otherwise.
 **nuget_cache_clear.targets**: NuGet packages' cache clearing post-build procedure. To clear off cache of the NuGet package built by the project, in case a same version is rebuilt.
 
 **productInfo.targets**: Ext.NET general version and other product informative data.
+
+**template.targets**: Common instructions to be included in [project template](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates) projects, that enables building Template-type NuGet packages using the `dotnet` CLI.

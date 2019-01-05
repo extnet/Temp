@@ -1,0 +1,21 @@
+<Project>
+  <PropertyGroup>
+    <NuspecFile>$(MSBuildProjectDirectory)/package.nuspec</NuspecFile>
+    <PackageType>Template</PackageType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <Target Name="SetNuspecProperties" BeforeTargets="GenerateNuspec">
+    <PropertyGroup>
+      <NuspecProperties>$(NuspecProperties);id=$(PackageId)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);config=$(Configuration)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);description=$(Description)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);authors=$(Authors)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);company=$(Company)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);product=$(Product)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);packageTypeName=$(PackageType)</NuspecProperties>
+    </PropertyGroup>
+    <!-- Useful for debugging --> 
+    <!--<Message Importance="high" Text="Nuspec: $(NuspecFile) - NuspecProperties: $(NuspecProperties)" />-->
+  </Target>
+</Project>

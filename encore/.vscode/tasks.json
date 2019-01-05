@@ -10,28 +10,16 @@
                 "isDefault": true
             },
             "dependsOn": [
-                "Build Client Project"
+                "Build Client Project",
+                "Build Template Projects"
             ],
             "problemMatcher": [
                 "$msCompile"
             ]
         },
         {
-            "label": "Run Website with Client Project",
-            "type": "process",
-            "command": "dotnet",
-            "args": [
-                "run"
-            ],
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated"
-            },
-            "dependsOn": [ "Build Solution" ]
-        },
-        {
             "label": "Build Library Project",
-            "type": "shell",
+            "type": "process",
             "group": "build",
             "command": "dotnet",
             "args": [
@@ -46,7 +34,7 @@
         },
         {
             "label": "Build Client Project",
-            "type": "shell",
+            "type": "process",
             "group": "build",
             "command": "dotnet",
             "args": [
@@ -54,6 +42,31 @@
             ],
             "options": {
                 "cwd": "ent/"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "Build Template Projects",
+            "group": "build",
+            "dependsOn": [
+              "Build Empty Template Project"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "Build Empty Template Project",
+            "type": "process",
+            "group": "build",
+            "command": "dotnet",
+            "args": [
+                "build"
+            ],
+            "options": {
+                "cwd": "Templates/Package/enlib.tpl.Empty"
             },
             "problemMatcher": [
                 "$msCompile"

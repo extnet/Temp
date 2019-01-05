@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ImportGroup>
+    <Import Project="../../../common/productInfo.targets" />
+    <Import Project="../../../common/template.targets" />
+    <Import Project="../../../common/nuget_cache_clear.targets" />
+  </ImportGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+</Project>

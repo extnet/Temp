@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <description>$description$</description>
+    <authors>$authors$</authors>
+    <packageTypes>
+      <packageType name="$packageTypeName$" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="../../empty/empty.csproj" target="content" />
+    <file src="template.json" target="content/.template.config" />
+    <file src="../../empty/appsettings.json" target="content" />
+    <file src="../../empty/appsettings.Development.json" target="content" />
+    <file src="../../empty/Startup.cs" target="content" />
+    <file src="../../empty/Program.cs" target="content" />
+    <file src="../../empty/Pages/_ViewImports.cshtml" target="content/Pages" />
+    <file src="../../empty/Pages/Index.cshtml" target="content/Pages" />
+    <file src="../../empty/Pages/Index.cshtml.cs" target="content/Pages" />
+    <file src="../../empty/Properties/launchSettings.json" target="content/Properties" />
+  </files>
+</package>
