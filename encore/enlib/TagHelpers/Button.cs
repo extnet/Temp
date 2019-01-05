@@ -8,7 +8,7 @@ namespace enlib.TagHelpers
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = "input";
-            
+
             output.Attributes.Add(new TagHelperAttribute("type", "button"));
             output.Attributes.Add(new TagHelperAttribute("class", "btn btn-default"));
 
