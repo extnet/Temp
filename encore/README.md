@@ -15,9 +15,26 @@ git clone https://github.com/extnet/Temp
 cd Temp/encore
 dotnet build
 
-# add Temp/encore/nuget_repository to your ~/.nuget/NuGet/NuGet.config as a local repo with your favourite text editor
-dotnet run #to see the 'ent' project website, open a browser and point to http://localhost:5000/
+
+# add Temp/encore/nuget_repository to your ~/.nuget/NuGet/NuGet.config 
+# as a local repo with your favourite text editor
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="local" value="<path>/Temp/encore/nuget_repository" />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  </packageSources>
+</configuration>
+
+
+# Run the 'ent' project website:
+#     http://localhost:5000
+cd ent
+dotnet run
+
+
 #ctrl+c (to shutdown webserver and return to the shell)
+
 
 dotnet new --install enlib.tpl.Empty::0.0.1-draft0
 
@@ -26,7 +43,9 @@ mkdir myProject
 cd myProject
 dotnet new extnet
 
-dotnet run #to see the empty template project website; open a browser and point to http://localhost:5000/
+# http://localhost:5000
+dotnet run 
+
 #ctrl+c (to shutdown webserver and return to the shell)
 ```
 
