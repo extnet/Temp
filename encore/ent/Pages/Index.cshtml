@@ -8,7 +8,12 @@
 <html>
 <head>
     <title>Ext.NET Core Demo</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        pre {
+            margin: 24px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container" role="main">
@@ -17,30 +22,36 @@
         </div>
 
         <h2>Html Component</h2>
+
         <div class="row">
             <div class="col-md-2">
                 Button
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 @Html.Button()
+                <pre>&commat;Html.Button()</pre>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-2">
                 Button Text
             </div>
-            <div class="col-md-2">
-                @Html.Button("Submit")
+            <div class="col-md-4">
+                @Html.Button("Save")
+                <pre>&commat;Html.Button("Save")</pre>
             </div>
         </div>
 
         <h2>Tag Helper</h2>
+
         <div class="row">
             <div class="col-md-2">
                 Button
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <ext-button></ext-button>
+                <pre>&lt;ext-button>&lt;/ext-button></pre>
             </div>
         </div>
 
@@ -48,10 +59,12 @@
             <div class="col-md-2">
                 Button Text
             </div>
-            <div class="col-md-2">
-                <ext-button>Submit</ext-button>
+            <div class="col-md-4">
+                <ext-button>Save</ext-button>
+                <pre>&lt;ext-button>Save&lt;/ext-button></pre>
             </div>
         </div>
+
 
         <h2>Code Behind</h2>
 
@@ -61,8 +74,9 @@
             <div class="col-md-2">
                 HtmlCompBtn
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 @Model.HtmlCompBtn
+                <pre>&commat;Model.HtmlCompBtn</pre>
             </div>
         </div>
 
@@ -70,8 +84,9 @@
             <div class="col-md-2">
                 HtmlCompBtnVal
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 @Model.HtmlCompBtnVal
+                <pre>&commat;Model.HtmlCompBtnVal</pre>
             </div>
         </div>
         
@@ -81,8 +96,9 @@
             <div class="col-md-2">
                 TagHlpBtn
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 @Model.TagHlpBtn
+                <pre>&commat;Model.TagHlpBtn</pre>
             </div>
         </div>
 
@@ -90,8 +106,9 @@
             <div class="col-md-2">
                 TagHlpBtnVal
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 @Model.TagHlpBtnVal
+                <pre>&commat;Model.TagHlpBtnVal</pre>
             </div>
         </div>
     </div>
